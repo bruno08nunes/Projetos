@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #F2F1F2;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.div_input {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+#inpTarefa {
+    padding: 35px 60px;
+    font-size: 2em;
+    flex-grow: 1;
+}
+
+.btn_add {
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 35px 60px;
+    font-size: 2em;
+    &:hover {
+        background-color: rgb(1, 68, 1);
+    }
+}
+
+.lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.linha-lista {
+    width: 80%;
+    display: flex;
+    background-color: white;
+    box-shadow: 8px 11px 18px 0px #00000047;
+    border: 1px solid black;
+}
+
+.item-lista {
+    cursor: pointer;
+    padding: 35px 60px;
+    flex: 1;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.inpCheck {
+    display: none;
+}
+
+.spanCheck {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    width: 35px;
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.label_texto {
+    font-size: 1.3em;
+}
+
+.btn_del {
+    cursor: pointer;
+    background-color: rgb(255, 0, 51);
+    color: white;
+    border: none;
+    padding: 40px;
+    &:hover {
+        background-color: rgb(155, 0, 31);
+    }
+}
+
+.checado {
+    background-color: #D6E9D3;
+    & .spanCheck {
+        background-color: #0C7F09;
+    }
+    & .label_texto {
+        color: rgb(80, 80, 80);
+        text-decoration: line-through;
+    }
+}
