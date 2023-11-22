@@ -46,12 +46,10 @@ btnAdd.addEventListener("click", () => {
         // Clicar em um item e marcá-lo ou desmarcá-lo
         itemLista.addEventListener("click", (e) => {
             e.preventDefault();
-            if (linhaLista.classList.contains("checado")) {
-                linhaLista.classList.remove("checado");
-                linhaLista.style.order = 0;
-            } else {
-                linhaLista.classList.add("checado");
+            if (linhaLista.classList.toggle("checado")) {
                 linhaLista.style.order = ++numChecados;
+            } else {
+                linhaLista.style.order = 0;
             }
         })
 
