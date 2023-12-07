@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            background-color: white;
+            height: 100%;
+        }
+
+        body {
+            height: inherit;
+            margin: 0;
+            display: grid;
+            place-items: center;
+        }
+
+        div {
+            display: inline-block;
+            font-size: 10rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>↻</div>
+    <script>
+        let rodada = 0;
+        let tempoInicial = null;
+        let rAF;
+        const div = document.querySelector("div");
+
+        function draw(timestamp) {
+            if (!tempoInicial) {
+                tempoInicial = timestamp;
+            }
+            rodada = (timestamp - tempoInicial) / 3;
+            if (rodada > 359) {
+                rodada %= 360;
+            }
+
+            div.style.transform = `rotate(${rodada}deg)`;
+
+            rAF = requestAnimationFrame(draw);
+        }
+        draw();
+    </script>
+</body>
+
+</html>
