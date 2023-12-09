@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        p {
+            font-size: 3em;
+            letter-spacing: 15px;
+        }
+        .div_btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            & > button {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p>00:00:00</p>
+        <div class="div_btns">
+            <button class="reset">Reset</button>
+            <button class="pause">Pausar</button>
+            <button class="play">Iniciar</button>
+        </div>
+    </main>
+
+    <script>
+        let segundo = 0;
+        let minuto = 0;
+        let hora = 0;
+        let parado = true;
+
+        function addZero(num) {
+            return String(num).padStart(2, "0")
+        }
+
+        function cronometrar() {
+            ++segundo;
+            if (segundo >= 60) {
+                segundo = 0;
+                ++minuto;
+            }
+            if (minuto >= 60) {
+                minuto = 0;
+                ++hora;
+            }
+            p.innerText = `${addZero(hora)}:${addZero(minuto)}:${addZero(segundo)}`;
+        }
+
+        const p = document.querySelector("p");
+
+        const btnReset = document.querySelector(".reset");
+        const btnPause = document.querySelector(".pause");
+        const btnPlay = document.querySelector(".play");
+
+        btnReset.addEventListener("click", () => {
+            segundo = 0;
+            minuto = 0;
+            hora = 0;
+            p.innerText = `${addZero(hora)}:${addZero(minuto)}:${addZero(segundo)}`;
+        })
+
+        btnPause.addEventListener("click", () => {
+            clearInterval(cronometro);
+            parado = true;
+        })
+
+        btnPlay.addEventListener("click", () => {
+            if (parado) {
+                cronometro = setInterval( cronometrar, 1000 );
+                parado = false;
+            }
+        })
+    </script>
+</body>
+</html>

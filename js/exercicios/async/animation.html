@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Sequencing animations</title>
+    <base href="../assets/">
+    <style>
+        body {
+            background: #6c373f;
+            display: flex;
+            justify-content: center;
+        }
+
+        #alice-container {
+            width: 90vh;
+            display: grid;
+            place-items: center;
+            grid-template-areas:
+                "a1 . ."
+                ". a2 ."
+                ". . a3";
+        }
+
+        #alice1 {
+            grid-area: a1;
+        }
+
+        #alice2 {
+            grid-area: a2;
+        }
+
+        #alice3 {
+            grid-area: a3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="alice-container">
+        <img id="alice1" src="alice.svg" role="img"
+            alt="silhouette of crouching long haired character in dress and short boots">
+        <img id="alice2" src="alice.svg" role="img"
+            alt="silhouette of crouching long haired character in dress and short boots">
+        <img id="alice3" src="alice.svg" role="img"
+            alt="silhouette of crouching long haired character in dress and short boots">
+    </div>
+
+    <script>
+        const aliceTumbling = [
+            { transform: 'rotate(0) scale(1)' },
+            { transform: 'rotate(360deg) scale(0)' }
+        ];
+
+        const aliceTiming = {
+            duration: 2000,
+            iterations: 1,
+            fill: 'forwards'
+        }
+
+        const alice1 = document.querySelector("#alice1");
+        const alice2 = document.querySelector("#alice2");
+        const alice3 = document.querySelector("#alice3");
+
+        // Método com promises
+
+        // alice1.animate(aliceTumbling, aliceTiming).finished
+        //     .then( () => alice2.animate(aliceTumbling, aliceTiming).finished )
+        //     .then( () => alice3.animate(aliceTumbling, aliceTiming).finished )
+        //     .catch(error => console.error(`Erro na animação: ${error}`));
+
+        // Método com async e await
+
+        async function animation() {
+            await alice1.animate(aliceTumbling, aliceTiming).finished;
+            await alice2.animate(aliceTumbling, aliceTiming).finished;
+            await alice3.animate(aliceTumbling, aliceTiming).finished;
+            animation();
+        }
+        animation()
+            .catch( error => console.error("Problema na animação: " + error) )
+    </script>
+</body>
+
+</html>
