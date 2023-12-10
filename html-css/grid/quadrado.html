@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            min-height: 100svh;
+            display: grid;
+            grid-template-areas: 
+                "quadrado1 . quadrado2"
+                "quadrado3 . quadrado4";
+        }
+        div {
+            background-color: blue;
+            padding: 25px;
+        }
+        .quadrado1 { grid-area: quadrado1; place-self: start; }
+        .quadrado2 { grid-area: quadrado2; place-self: start end; }
+        .quadrado3 { grid-area: quadrado3; place-self: end start; }
+        .quadrado4 { grid-area: quadrado4; place-self: end; }
+    </style>
+</head>
+<body>
+    <div class="quadrado1">Lorem</div>
+    <div class="quadrado2">Lorem</div>
+    <div class="quadrado3">Lorem</div>
+    <div class="quadrado4">Lorem</div>
+</body>
+</html>

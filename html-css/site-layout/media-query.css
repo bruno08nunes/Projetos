@@ -1,0 +1,25 @@
+@media screen and (min-width: 600px) {
+    .menu-hamburguer, .div-menu-hamburguer {
+        display: none;
+    }
+    .div-pesquisar {
+        display: block;
+    }
+    .div-principal-nav a:not(:first-child) {
+        display: block;
+    }
+    .div-dados {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .form {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+}
+@media screen and (min-width: 800px) {
+    .p-figure {
+        display: block;
+    }
+}

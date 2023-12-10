@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Nabla&display=swap');
+
+        body {
+            background-color: blueviolet;
+        }
+
+        .img {
+            width: 500px;
+            height: 600px;
+            border: 3px solid gold;
+            cursor: pointer;
+        }
+
+        .img:hover {
+            width: 550px;
+            height: 650px;
+            border: 3px solid rgb(77, 203, 245);
+        }
+        
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 700px;
+            flex-wrap: wrap;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-family: 'Monoton', cursive;
+            text-align: center;
+            color: white;
+            height: 50px;
+        }
+        
+        input {
+            background-color: black;
+            color: white;
+            margin-left: 93vw;
+            margin-top: 8vh;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>O Site Perfeito</h1>
+    <div>
+        <img class="img" src="assets/shadow.jpg" alt="" onclick="clicar(0)" ondblclick="dblclicar(0)">
+        <img class="img" src="assets/shadow.jpg" alt="" onclick="clicar(1)" ondblclick="dblclicar(1)">
+        <img class="img" src="assets/shadow.jpg" alt="" onclick="clicar(2)" ondblclick="dblclicar(2)">
+    </div>
+    <input type="button" value="Mudar Fundo" onclick="mudar()">
+
+    <script>
+        var a = []
+        function clicar(n) {
+            let img = document.getElementsByClassName("img")[n]
+            if (a[n] == undefined) {
+                a[n] = 0
+            }
+            
+            if (a[n] == 0 ) {
+                img.src = "assets/shadow1.webp"
+                a[n] = 1
+            } else {
+                img.src = "assets/shadow.jpg"
+                a[n] = 0
+            }
+        }
+        
+        let fundo = document.getElementsByTagName("body")[0]
+        let fun=0
+        function mudar() {
+            if (fun==0) {
+                fundo.style.background = "#1b1b1b"
+                fun=1
+            } else if (fun==1) {
+                fundo.style.background = "#a33f65"
+                fun=2
+            } else {
+                fundo.style.background = "blueviolet"
+                fun=0
+            }
+        }
+        function dblclicar(n) {
+            let img = document.getElementsByClassName("img")[n]
+            var div = document.createElement("span")
+            div.addEventListener("dblclick", click2)
+            div.style.position = "absolute"
+            div.style.margin = "-88.5vh 0 0 -98.5vw"
+            div.style.width = "100vw"
+            div.style.height = "100vh"
+            div.style.background = "#000000bb"
+            fundo.appendChild(div)
+        }
+        function click2() {
+            var div = document.querySelector("span")
+            document.body.removeChild(div)
+        }
+    </script>
+</body>
+</html>

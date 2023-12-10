@@ -1,0 +1,404 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.8;
+    font-family: "Lato", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body, a {
+    color: #777;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header-principal {
+    height: 100vh;
+    height: 100svh;
+    position: relative;
+}
+
+.div-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-scroll {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    top: 0;
+    animation: nav-scroll .6s;
+}
+
+@keyframes nav-scroll {
+    from {
+        top: -300px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.nav-scroll .div-nav {
+    background-color: white;
+    box-shadow: 0px 3px 6px #0000003b;
+}
+
+.div-principal-nav {
+    display: flex;
+}
+
+.div-principal-nav a:not(:first-child) {
+    display: none;
+}
+
+.nav-principal :is(a, span) {
+    position: relative;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.nav-principal a:hover {
+    background-color: #CCCCCC;
+    color: black;
+}
+
+.nav-principal span {
+    cursor: pointer;
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+.div-pesquisar {
+    display: none;
+}
+
+.menu-hamburguer {
+    display: none;
+    background-color: white;
+    color: black;
+}
+
+.div-header-parallax {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: -1;
+    background-image: url(assets/parallax1.jpg);
+    filter: opacity(0.75);
+}
+
+.parallax {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.div-header-parallax h1 {
+    background-color: black;
+    color: white;
+    letter-spacing: 10px;
+    padding: 10px 24px;
+    font-weight: normal;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-size: 24px
+}
+
+/* MAIN */
+
+.sec-about-me, .sect-my-work, .sect-form {
+    max-width: 960px;
+    margin: auto;
+    padding: 64px 16px;
+}
+
+:is(.sec-about-me, .sect-my-work, .sect-form) h2 {
+    text-align: center;
+    font-weight: normal;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+p.subtitulo {
+    font-style: italic;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.paragrafo {
+    margin: 15px 0;
+}
+
+.div-sec {
+    padding: 12px 24px;
+    display: flex;
+    gap: 45px;
+}
+
+.div-sec > * {
+    flex: 1;
+}
+
+.div-sec figcaption {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 15px 0;
+    margin-bottom: 35px;
+}
+
+.div-sec figure img {
+    opacity: 0.75;
+    transition: 0.3s;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.img-pessoa {
+    width: 100%;
+}
+
+.p-figure {
+    display: none;
+}
+
+.p-titulo {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.p-qualidades {
+    display: flex;
+    gap: 10px;
+    letter-spacing: 10px;
+}
+
+.barra-progresso {
+    background-color: #F1F1F1;
+    & > div {
+        padding: 5px 0;
+        background-color: #616161;
+        display: grid;
+        place-items: center;
+        color: white;
+    }
+}
+
+.div-qualidades {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+}
+
+.div-dados {
+    background-color: #616161;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 32px 0;
+}
+
+.div-dados div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & p:first-child {
+        font-size: 1.7em;
+    }
+}
+
+.div-portfolio, .div-contact {
+    background-image: url(assets/parallax2.jpg);
+    display: grid;
+    place-items: center;
+    height: 400px;
+}
+
+:is(.div-portfolio, .div-contact) h2 {
+    color: white;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 10px;
+}
+
+.div-imgs {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding: 0 8px;
+    gap: 15px;
+}
+
+.div-imgs img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: .4s;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    display: block;
+
+}
+
+.sect-my-work button {
+    background-color: #F1F1F1;
+    margin: auto;
+    margin-top: 64px;
+    padding: 12px 24px;
+    font-size: 15px;
+    text-transform: uppercase;
+    &:hover {
+        background-color: #CCCCCC;
+    }
+}
+
+.div-contact {
+    background-image: url(assets/parallax3.jpg);
+    opacity: 0.75;
+}
+
+.sect-form {
+    padding: 64px 32px;
+}
+
+.form {
+    padding: 48px 0;
+}
+
+.form > * {
+    flex: 1;
+}
+
+.p-informacoes {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.p-form {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+form div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.inputs-mensagem {
+    flex: 1 1 0px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+button[type="submit"] {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    padding: 5px 15px;
+    margin-left: auto;
+    margin-top: 5px;
+    text-transform: uppercase;
+    &:hover {
+        background-color: #CCCCCC;
+        color: black;
+    }
+}
+
+footer {
+    background-color: #666666;
+    color: white;
+    padding: 64px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1em;
+}
+
+footer button {
+    background-color: #F7F7F7;
+    color: black;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.1em;
+    &:hover {
+        background-color: #CCCCCC;
+    }
+}
+
+footer nav {
+    font-size: 1.3em;
+    display: flex;
+    gap: 5px;
+    & a:hover {
+        color: #999999;
+    }
+}
+
+footer a {
+    color: white;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    width: 90%;
+    display: none;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}

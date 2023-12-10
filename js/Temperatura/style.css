@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(70, 142, 236);
+    color: white;
+    font-size: 20px;
+}
+
+h1{
+    text-align: center;
+}
+
+main{
+    margin: auto;
+    width: 30vw;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.432)
+}
+
+footer{
+    font-style: italic;
+    text-align: center;
+}

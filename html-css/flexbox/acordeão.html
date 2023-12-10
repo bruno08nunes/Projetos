@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a:nth-child(3n) {
+            background-image: url("https://i.pinimg.com/originals/7a/c5/18/7ac51896710038993f8ea9f5b862d71a.jpg");
+        }
+        a:nth-child(3n+1) {
+            background-image: url("https://images.pexels.com/photos/4061199/pexels-photo-4061199.jpeg?cs=srgb&dl=pexels-sebastian-pociecha-4061199.jpg&fm=jpg");
+        }
+        a:nth-child(3n+2) {
+            background-image: url("https://images.adsttc.com/media/images/5df1/00f5/3312/fd16/7900/0760/large_jpg/gabriel-ramos-L-vnYS1p6l4-unsplash.jpg?1576075494");
+        }
+        main {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        }
+        a {
+            flex: 1;
+            background-position: center center;
+            background-size: cover;
+            transition: 0.7s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        a:hover {
+            flex-grow: 4;
+        }
+        a:hover > p {
+            display: block;
+        }
+        p {
+            color: white;
+            font-size: 3em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="">
+            <p>Olá</p>
+        </a>
+        <a href="">
+            <p>OlASFASFASFASFASFASFASFá</p>
+        </a>
+        <a href="">
+            <p>Olá</p>
+        </a>
+        <a href="">
+            <p>Olá</p>
+        </a>
+        <a href="">
+            <p>Olá</p>
+        </a>
+        <a href="">
+            <p>Olá</p>
+        </a>
+    </main>
+</body>
+</html>

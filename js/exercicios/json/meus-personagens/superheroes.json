@@ -1,0 +1,125 @@
+{
+    "nomeGrupo": "Ordo Realitas",
+    "formacao": "2016",
+    "baseSecreta": "Suvaco Seco",
+    "active": true,
+    "membros": [
+        {
+            "nome": ["Luísa", "Hernándes"],
+            "classe": "Combatente",
+            "trilha": "Guerreira",
+            "idade": 28,
+            "afinidade": "Sangue",
+            "habilidades": [
+                "Luta com o machado",
+                "Lábia",
+                "Força e resistência",
+                "Regeneração"
+            ]
+        },
+        {
+            "nome": ["Bianca", "LeBlanc"],
+            "classe": "Ocultista",
+            "trilha": "Lâmina Paranormal",
+            "idade": 24,
+            "afinidade": "Energia",
+            "habilidades": [
+                "Agilidade",
+                "Rituais",
+                "Luta com bastão",
+                "Artes"
+            ]
+        },
+        {
+            "nome": ["Akira", "Oshiro"],
+            "classe": "Ocultista",
+            "trilha": "Lâmina Paranormal",
+            "idade": 21,
+            "afinidade": "Conhecimento",
+            "habilidades": [
+                "Visão do Oculto",
+                "Luta com katana",
+                "Rituais",
+                "Teleporte das Sombras"
+            ]
+        },
+        {
+            "nome": ["Fernando", "'Nando'", "Farofa"],
+            "classe": "Especialista",
+            "trilha": "Negociador",
+            "idade": 34,
+            "afinidade": "Nenhuma",
+            "habilidades": [
+                "Lábia e negociação",
+                "Dinheiro",
+                "Moda e costura",
+                "Pontaria"
+            ]
+        },
+        {
+            "nome": ["Johan", "Eriksen"],
+            "classe": "Combatente",
+            "trilha": "Aniliquilador",
+            "idade": 47,
+            "afinidade": "Nenhuma",
+            "habilidades": [
+                "Pontaria extrema",
+                "Tática",
+                "Força e resistência",
+                "Agilidade"
+            ]
+        },
+        {
+            "nome": ["Magnus", "Romero", "García", "Valdez"],
+            "classe": "Especialista",
+            "trilha": "Técnico",
+            "idade": 58,
+            "afinidade": "Nenhuma",
+            "habilidades": [
+                "Mêcanica e construção",
+                "Pontaria",
+                "Força e resistência",
+                "Tática"
+            ]
+        },
+        {
+            "nome": ["Aurora", "Duarte"],
+            "classe": "Ocultista",
+            "trilha": "Conduíte",
+            "idade": 16,
+            "afinidade": "Energia",
+            "habilidades": [
+                "Rituais",
+                "Tecnologia",
+                "Lábia",
+                "Especialista em Morte"
+            ]
+        },
+        {
+            "nome": ["Dmitriy", "Aleksandrovich","Dostoiévski"],
+            "classe": "Ocultista",
+            "trilha": "Graduado",
+            "idade": 24,
+            "afinidade": "Conhecimento",
+            "habilidades": [
+                "Rituais",
+                "Tecnologia e tática",
+                "Lábia",
+                "Telepatia"
+            ]
+        },
+        {
+            "nome": ["Ekaterina", "Aleksandrovina", "Dostoiévskina"],
+            "classe": "Especialista",
+            "trilha": "Médica de Campo",
+            "idade": 24,
+            "afinidade": "Morte",
+            "habilidades": [
+                "Medicina",
+                "Lábia",
+                "Tecnologia e pilotagem",
+                "Pontaria"
+            ]
+        }
+    ]
+}

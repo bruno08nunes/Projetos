@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 400px;
+            margin: auto;
+            display: block;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- <select name="a" id="a">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+        <option value="4">Option 4</option>
+        <option value="5">Option 5</option>
+    </select>
+    <p></p> -->
+    <div>
+        <h1>Lorem, ipsum.</h1>
+    </div>
+
+    <img src="" alt="">
+    <input type="file" name="input" id="input">
+    <script>
+        const div = document.querySelector("div");
+        const h1 = document.querySelector("h1")
+        const p = document.createElement("p")
+        p.innerHTML = "Oi"
+        div.replaceChild(p, h1)
+        for (let i = 0; i < 10; i++) {}
+        // window.open("https://www.youtube.com", "_self")
+
+        // window.addEventListener("mousedown", (e) => {
+        //     alert(e.button)
+        // })
+        const inp = document.querySelector("input");
+        inp.addEventListener("change", (e) => {
+            const fr = new FileReader();
+            fr.onload = () => {
+                document.querySelector("img").src = fr.result
+            }
+            fr.readAsDataURL(e.target.files[0])
+        })
+
+        // function digitar(texto, intervalo) {
+        //     const arr = texto.split("");
+        //     const tempo = setInterval( () => {
+        //         const p = document.querySelector("p");
+        //         if (!arr.length) {
+        //             return clearInterval(tempo)
+        //         }
+        //         p.innerHTML += arr.shift();
+        //     }, intervalo);
+        // }
+        // digitar("Bem vindos", 300)
+        // const sel = document.querySelector("#a")
+        // for (let pos = 0; pos < sel.options.length; pos++) {
+        //     if (sel.options[pos].value == 3) {
+        //         sel.selectedIndex = pos;
+        //     }
+        // }
+        // document.addEventListener("visibilitychange", () => {
+        //     if (document.hidden) {
+        //         console.log("oi")
+        //     }
+        // });
+        // window.onbeforeunload = () => {
+        //     return "Você tem certeza que quer sair?";
+        // }
+    </script>
+</body>
+</html>

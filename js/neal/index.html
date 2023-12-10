@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightgray;
+        }
+        header {
+            background-color: white;
+            padding: 15px;
+            max-width: 900px;
+            text-align: center;
+            margin: auto;
+        }
+        section {
+            margin:  20px auto;
+            max-width: 900px;
+            padding: 10px;
+            display: flex;
+        }
+        section:first-of-type {
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        label {
+            background-color: white;
+            flex: 1 1 275px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            gap: 15px;
+            font-size: 1.2em;
+            border: 1px solid black;
+        }
+        input {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            appearance: none;
+            border: 1px solid black;
+            background-color: white;
+        }
+        input:checked::after {
+            content: "\2713";
+            color: lime;
+            font-size: 1.9em;
+            position: absolute;
+            font-weight: bolder;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            vertical-align: middle;
+        }
+        label:has(> input:checked) {
+            background-color: lime;
+        }
+        .saida {
+            background-color: white;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.5em;
+        }
+        progress {
+            height: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+        progress {
+            appearance: none;
+        }
+        progress::-webkit-progress-bar {
+            overflow: hidden;
+            border: 1px solid black;
+            background: transparent;
+            border-radius: 50px;
+        }
+        progress::-moz-progress-bar {  
+            overflow: hidden;
+            border: 1px solid black;
+            background: transparent;
+            border-radius: 50px;
+        }
+        progress::-webkit-progress-value {
+            background:lime;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checklist da Vida</h1>
+    </header>
+    <section>
+        <label>
+            <input type="checkbox" name="nascer" id="nascer">
+            <p>Nascer</p>
+        </label>
+        <label>
+            <input type="checkbox" name="passos" id="passos">
+            <p>Dar os primeiros passos</p>
+        </label>
+        <label>
+            <input type="checkbox" name="palavras" id="palavras">
+            <p>Dizer as primeiras palavras</p>
+        </label>
+        <label>
+            <input type="checkbox" name="ler" id="ler">
+            <p>Aprender a Ler</p>
+        </label>
+        <label>
+            <input type="checkbox" name="amigo" id="amigo">
+            <p>Fazer um amigo</p>
+        </label>
+        <label>
+            <input type="checkbox" name="bike" id="bike">
+            <p>Aprender a andar de bike</p>
+        </label>
+        <label>
+            <input type="checkbox" name="livro" id="livro">
+            <p>Ler um livro</p>
+        </label>
+        <label>
+            <input type="checkbox" name="nadar" id="nadar">
+            <p>Aprender a nadar</p>
+        </label>
+        <label>
+            <input type="checkbox" name="fundamental" id="fundamental">
+            <p>Terminar o ensino fundamental</p>
+        </label>
+        <label>
+            <input type="checkbox" name="esporte" id="esporte">
+            <p>Praticar um Esporte</p>
+        </label>
+    </section>
+    <section class="saida">
+        <output>Você marcou: 0 / 10</output>
+        <progress value="0" max="10"></progress>
+    </section>
+
+    <script>
+        const inputs = document.querySelectorAll("input")
+        const output = document.querySelector("output")
+        const progress = document.querySelector("progress")
+
+        for (let pos = 0; pos < inputs.length; pos++) {
+            inputs[pos].addEventListener("change", checar)
+        }
+
+        function checar() {
+            let checados = document.querySelectorAll("input:checked")
+            output.innerHTML = `Você marcou ${checados.length} / ${inputs.length}`
+            progress.value = checados.length
+            if (checados.length == inputs.length) {
+                alert("Parabéns, você zerou a vida")
+            }
+        }
+    </script>
+</body>
+</html>

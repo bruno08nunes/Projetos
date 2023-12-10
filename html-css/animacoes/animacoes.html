@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+        }
+        p {
+            width: 24ch;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: digitar 3s steps(24) infinite alternate-reverse;
+            font-size: 2em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        span {
+            border-left: 1px solid black;
+            height: 2em;
+            animation: piscar .5s infinite alternate-reverse;
+        }
+
+        @keyframes digitar {
+            from {
+                width: 0ch;
+            }
+        }
+
+        @keyframes piscar {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <p>Olá, tudo bem com você?</p>
+    <span></span>
+</body>
+</html>

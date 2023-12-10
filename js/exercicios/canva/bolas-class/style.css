@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+    left: 5px;
+    color: white;
+}
+
+p {
+    position: absolute;
+    top: 35px;
+    color: white;
+    font-size: 1.1em;
+    left: 5px;
+}

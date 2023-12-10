@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {
+            background-color: lightgray;
+        }
+        header {
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            max-width: 900px;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+            border-radius: 50%;
+        }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 1.9em;
+        }
+        section:first-of-type {
+            padding: 20px;
+            background-image: linear-gradient(180deg,#2ecc71,#1abc9c);
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        section:last-of-type {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        section:last-of-type > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1 1 255px;
+            background-color: white;
+            padding: 15px;
+        }
+        section:last-of-type > div > div:last-child {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+        }
+        input, button {
+            width: 30%;
+        }
+        input {
+            appearance: none;
+            border: 1px solid black;
+            padding: 2px 5px;
+            text-align: center;
+        }
+        input[type=number]::-webkit-inner-spin-button { 
+            appearance: none;
+        }
+        button {
+            border: 0;
+            font-size: 0.6em;
+            cursor: pointer;
+        }
+        .buy {
+            background-image: linear-gradient(180deg,#2ecc71,#1abc9c);
+            color: white;
+            padding: 2px;
+        }
+        button:hover {
+            transform: scale(1.06);
+        }
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        section img {
+            height: 140px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://neal.fun/spend/billgates.jpg" alt="">
+        <h1>Gaste o dinheiro do riquinho</h1>
+    </header>
+    <section>
+        <output>
+            R$100000
+        </output>
+    </section>
+    <section>
+        <div>
+            <img src="https://neal.fun/spend/images/big-mac.jpg" alt="">
+            <div>
+                <h2>Big Mac</h2>
+                <p>R$2,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/flip-flops.jpg" alt="">
+            <div>
+                <h2>Chinelo</h2>
+                <p>R$3,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/coca-cola-pack.jpg" alt="">
+            <div>
+                <h2>Coquinha Gelada</h2>
+                <p>R$5,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/movie-ticket.jpg" alt="">
+            <div>
+                <h2>Cinema com a Gata</h2>
+                <p>R$12,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/book.jpg" alt="">
+            <div>
+                <h2>Percy Jackson 42</h2>
+                <p>R$15,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/lobster-dinner.jpg" alt="">
+            <div>
+                <h2>Camarões</h2>
+                <p>R$45,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/big-mac.jpg" alt="">
+            <div>
+                <h2>Big Mac</h2>
+                <p>R$2,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/flip-flops.jpg" alt="">
+            <div>
+                <h2>Chinelo</h2>
+                <p>R$3,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/coca-cola-pack.jpg" alt="">
+            <div>
+                <h2>Coquinha Gelada</h2>
+                <p>R$5,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/movie-ticket.jpg" alt="">
+            <div>
+                <h2>Cinema com a Gata</h2>
+                <p>R$12,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/book.jpg" alt="">
+            <div>
+                <h2>Percy Jackson 42</h2>
+                <p>R$15,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/lobster-dinner.jpg" alt="">
+            <div>
+                <h2>Camarões</h2>
+                <p>R$45,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/big-mac.jpg" alt="">
+            <div>
+                <h2>Big Mac</h2>
+                <p>R$2,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/flip-flops.jpg" alt="">
+            <div>
+                <h2>Chinelo</h2>
+                <p>R$3,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/coca-cola-pack.jpg" alt="">
+            <div>
+                <h2>Coquinha Gelada</h2>
+                <p>R$5,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/movie-ticket.jpg" alt="">
+            <div>
+                <h2>Cinema com a Gata</h2>
+                <p>R$12,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/book.jpg" alt="">
+            <div>
+                <h2>Percy Jackson 42</h2>
+                <p>R$15,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+        <div>
+            <img src="https://neal.fun/spend/images/lobster-dinner.jpg" alt="">
+            <div>
+                <h2>Camarões</h2>
+                <p>R$45,00</p>
+            </div>
+            <div>
+                <button class="sell">Vender</button>
+                <input type="number">
+                <button class="buy">Buy</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const inputs = document.querySelectorAll("input")
+        const buy = document.querySelectorAll(".buy")
+        const sell = document.querySelectorAll(".sell")
+        const p = document.querySelectorAll("p")
+        let valores = []
+        let dinheiro = document.querySelector("section:first-of-type")
+        let dinheiroMax = 100000
+        let dinheiroNum = dinheiroMax
+        dinheiro.innerHTML = dinheiroNum.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
+
+
+        for (let pos = 0; pos < p.length; pos++) {
+            let valor = Number(p[pos].textContent.slice(2).replace(",", "."))
+            valores.push(valor)
+        }
+
+        for (let pos in inputs) {
+            inputs[pos].value = 0
+            inputs[pos].onfocus = function () {
+                this.value = ""
+            }
+            inputs[pos].onblur = function () {
+                this.value==0?this.value = 0:this.value
+            }
+        }
+
+        for (let pos = 0; pos<buy.length; pos++) {
+            buy[pos].onclick = function () {
+                comprar(pos)
+            }
+        }
+        for (let pos = 0; pos<sell.length; pos++) {
+            sell[pos].onclick = function () {
+                vender(pos)
+            }
+        }
+        
+        function comprar(pos) {
+            if (dinheiroNum - valores[pos] >= 0) {
+                event.target.setAttribute("class", "buy apertado")
+                irmao = document.querySelector("input:has(+ .apertado)")
+                valor = Number(irmao.value)
+                valor += 1
+                irmao.value = valor
+                event.target.setAttribute("class", "buy")
+                comparar()
+                dinheiroNum = dinheiroMax
+                let subtrai = []
+                for (let posi = 0; posi < inputs.length; posi++) {
+                    if (inputs[posi].value != 0) {
+                        subtrai.push(valores[posi] * inputs[posi].value)
+                    }
+                    if (subtrai[posi]) {
+                        dinheiroNum -= subtrai[posi]
+                    }
+                }
+                dinheiro.innerHTML = dinheiroNum.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
+            }
+        }
+        
+        function vender(pos) {
+            if (dinheiroNum + valores[pos] <= dinheiroMax) {
+                event.target.setAttribute("class", "sell apertado")
+                irmao = document.querySelector(".apertado + input")
+                irmao.value -=1
+                event.target.setAttribute("class", "sell")
+                comparar()
+                dinheiroNum += valores[pos]
+                dinheiro.innerHTML = dinheiroNum.toLocaleString("pt-BR", {style: "currency", currency: "BRL"})
+            }
+        }
+
+        function comparar() {
+            for (let pos in inputs) {
+                if (inputs[pos].value < 0) {
+                    inputs[pos].value = 0
+                }
+            }
+        }
+    </script>
+</body>
+</html>

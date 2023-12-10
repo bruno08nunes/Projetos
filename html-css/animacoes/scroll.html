@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        p {
+            font-size: 2em;
+            margin: auto;
+            width: 800px;
+            animation: aparecer;
+            animation-timeline: view(block);
+            animation-range: cover 0% cover 50%;
+            padding: 70px 0;
+        }
+
+        div {
+            position: sticky;
+            top: 0;
+            background-color: aqua;
+            height: 20px;
+            animation: avancar;
+            animation-timeline: scroll();
+        }
+
+        @keyframes aparecer {
+            from{
+                translate: -100vw 0;
+            }
+            to {
+                translate: 0 0;
+            }
+        }
+
+        @keyframes avancar {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            padding: 50px;
+        }
+
+        strong {
+            animation: cor;
+            animation-fill-mode: forwards;
+            animation-timeline: view();
+            animation-range: cover 0% cover 50%;
+        }
+
+        @keyframes cor {
+            from {
+                background-color: transparent;
+            }
+            to {
+                background-color: aqua;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p>Lorem ipsum dolor sit amet consectetur. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur <strong>adipisicing elit</strong>. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+    <p>Lorem ipsum dolor sit amet consectetur <strong>adipisicing elit</strong>. Placeat consectetur exercitationem reiciendis, dolores eum ea delectus sint tempora ducimus a facere, in quam, odit enim quo. Ratione ad necessitatibus quas!</p>
+
+    <footer><address>&copy; Bruno Nunes</address></footer>
+</body>
+</html>
