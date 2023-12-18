@@ -1,0 +1,125 @@
+:root {
+    --bg-color: #04044c;
+    --secondary-bg-color: #494A7D;
+    --primary-color: #FFF;
+    --secondary-color: #25CC88;
+    --text-color: #8789Af;
+    --border-color: #20235B;
+    --tamanho-icone: 45px;
+}
+
+#checkout-page {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+/* Modal */
+#fade {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.336);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+}
+
+#fade .spinner-border {
+    width: 60px;
+    height: 60px;
+}
+
+:is(.hide, #a) {
+    display: none;
+}
+
+#message {
+    width: 40%;
+}
+
+.alert.alert-light p {
+    border-bottom: 1px solid #333;
+    padding: 1.2em 0;
+}
+
+/* Steps */
+#order-form-container {
+    padding: 1.5em;
+    max-width: 700px;
+}
+
+#steps {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & i {
+        background-color: var(--secondary-bg-color);
+        width: var(--tamanho-icone);
+        height: var(--tamanho-icone);
+        line-height: var(--tamanho-icone);
+        border-radius: 50%;
+        font-size: 1.2em;
+        text-align: center;
+        margin-bottom: 0.3em;
+    }
+    & .active {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+    & p {
+        color: var(--text-color);
+    }
+}
+
+.line {
+    border-bottom: 1px solid var(--border-color);
+    position: absolute;
+    top: calc(var(--tamanho-icone) / 2);
+    width: 90%;
+    left: 5%;
+    z-index: -1;
+}
+
+/* Form */
+#order-form-container {
+    & :is(input, select) {
+        background-color: var(--bg-color);
+        border: 2px solid var(--border-color);
+        color: var(--primary-color);
+    }
+
+    & select {
+        padding: 1rem .75rem;
+    }
+
+    & label {
+        color: var(--text-color);
+        left: 1em;
+    }
+
+    & :is(input, select):disabled {
+        background-color: var(--secondary-bg-color);
+        color: var(--text-color);
+    }
+
+    & input:focus {
+        border-color: var(--secondary-color);
+    }
+
+    & #save-btn {
+        background-color: #25cc88;
+        border: none;
+        height: 3em;
+        width: 8em;
+        &:hover {
+            background-color: #177952;
+        }
+    }
+}
