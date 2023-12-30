@@ -68,6 +68,7 @@ const exibirDados = () => {
             // Label que tem o input e o texto dentro
             const itemLista = document.createElement("label");
             itemLista.classList.add("item-lista");
+            itemLista.title = cursor.value.tarefa;
 
             // Input que não aparece
             const inpCheck = document.createElement("input");

@@ -44,11 +44,16 @@ h1 {
     gap: 20px;
     padding-top: 20px;
     align-items: center;
+    margin-bottom: 20px;
+    width: 80%;
+    margin: auto;
 }
 
 .linha-lista {
-    width: 80%;
+    width: 100%;
+    overflow: hidden;
     display: flex;
+    
     background-color: white;
     box-shadow: 8px 11px 18px 0px #00000047;
     border: 1px solid black;
@@ -79,6 +84,10 @@ h1 {
 
 .label_texto {
     font-size: 1.3em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 40vw;
 }
 
 .btn_del {

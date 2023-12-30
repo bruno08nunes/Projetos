@@ -1,0 +1,76 @@
+@media screen and (max-width: 1000px) {
+    #inpTarefa {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+
+    .btn_add {
+        padding: 30px 3vw;
+    }
+
+    .label_texto {
+        /* width: 40vw; */
+        font-size: 1.1em;
+    }
+
+    .item-lista {
+        padding: 10px 30px;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #inpTarefa {
+        font-size: 4vw;
+        padding: 2vw;
+    }
+
+    .btn_add {
+        padding: 30px 3vw;
+        font-size: 1.3em;
+    }
+
+    .lista, .div_input {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .div_input {
+        flex-direction: column;
+        gap: 15px;
+        & #inpTarefa {
+            font-size: 1.6em;
+        }
+        & .btn_add {
+            border: 1px solid black;
+            font-size: 1.2em;
+            padding: 20px;
+        }
+    }
+
+    .linha-lista {
+        & .btn_del {
+            padding: 20px;
+        }
+    }
+    
+    .spanCheck {
+        width: 20px;
+        height: 20px;
+        font-size: 1em;
+    }
+
+    .item-lista {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .lista, .div_input {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+}
