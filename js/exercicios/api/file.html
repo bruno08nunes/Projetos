@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvar Foto</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="" alt="">
+    <div>
+        <input type="file" name="file" id="file" accept="image/*">
+    </div>
+
+    <script>
+        const inpFile = document.querySelector("#file");
+        let db;
+        const openRequest = window.indexedDB.open("img_db", 1);
+        openRequest.addEventListener("error", () => console.error("Banco de dados falhou ao abrir."));
+        openRequest.addEventListener("success", () => {
+            db = openRequest.result;
+            exibirDados();
+        });
+        openRequest.addEventListener("upgradeneeded", e => {
+            db = e.target.result;
+            const objectStore = db.createObjectStore("img_os", {
+                keyPath: "id"
+            });
+            objectStore.createIndex("img", "img", { unique: true });
+        });
+
+        inpFile.addEventListener("change", (e) => {
+            const transaction = db.transaction(["img_os"], "readwrite");
+            const objectStore = transaction.objectStore("img_os");
+            const deleteRequest = objectStore.delete(1);
+            deleteRequest.addEventListener("success", () => {
+                const addRequest = objectStore.add({ img: e.target.files[0], id: 1 });
+                transaction.addEventListener("complete", exibirDados);
+                transaction.addEventListener("error", e => console.error("Transação não executada com sucesso"));
+            })
+        })
+
+        const exibirDados = () => {
+            const objectStore = db.transaction("img_os").objectStore("img_os");
+            const img = document.querySelector("img");
+            objectStore.openCursor().addEventListener("success", (e) => {
+                const cursor = e.target.result;
+                if (cursor) {
+                    const file = new FileReader();
+                    file.onload = () => {
+                        document.querySelector("img").src = file.result;
+                    };
+                    file.readAsDataURL(cursor.value.img);
+                    cursor.continue();
+                } else {
+                    img.alt = "Imagem não encontrada";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
