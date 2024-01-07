@@ -40,36 +40,29 @@
             const objectStore = db.createObjectStore("img_os", {
                 keyPath: "id"
             });
-            objectStore.createIndex("img", "img", { unique: true });
         });
 
         inpFile.addEventListener("change", (e) => {
             const transaction = db.transaction(["img_os"], "readwrite");
             const objectStore = transaction.objectStore("img_os");
-            const deleteRequest = objectStore.delete(1);
-            deleteRequest.addEventListener("success", () => {
-                const addRequest = objectStore.add({ img: e.target.files[0], id: 1 });
-                transaction.addEventListener("complete", exibirDados);
-                transaction.addEventListener("error", e => console.error("Transação não executada com sucesso"));
-            })
+            objectStore.put({ img: e.target.files[0], id: 1 })
+            transaction.addEventListener("complete", exibirDados);
+            transaction.addEventListener("error", e => console.error("Transação não executada com sucesso"));
         })
 
         const exibirDados = () => {
             const objectStore = db.transaction("img_os").objectStore("img_os");
             const img = document.querySelector("img");
-            objectStore.openCursor().addEventListener("success", (e) => {
-                const cursor = e.target.result;
-                if (cursor) {
-                    const file = new FileReader();
-                    file.onload = () => {
-                        document.querySelector("img").src = file.result;
-                    };
-                    file.readAsDataURL(cursor.value.img);
-                    cursor.continue();
-                } else {
-                    img.alt = "Imagem não encontrada";
+
+            const getRequest = objectStore.get(1);
+            getRequest.addEventListener("success", (e) => {
+                const fr = new FileReader();
+                console.log(e)
+                fr.onload = () => {
+                    img.src = fr.result
                 }
-            });
+                fr.readAsDataURL(e.target.result.img)
+            })
         }
     </script>
 </body>
