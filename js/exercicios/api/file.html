@@ -45,7 +45,7 @@
         inpFile.addEventListener("change", (e) => {
             const transaction = db.transaction(["img_os"], "readwrite");
             const objectStore = transaction.objectStore("img_os");
-            objectStore.put({ img: e.target.files[0], id: 1 })
+            objectStore.put({ img: e.target.files[0], id: 1 });
             transaction.addEventListener("complete", exibirDados);
             transaction.addEventListener("error", e => console.error("Transação não executada com sucesso"));
         })
